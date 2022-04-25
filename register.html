@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>register</title>
+    <style>
+      *
+      {
+        box-sizing:border-box;
+
+      }
+      .container{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        align-content:center;
+        height:100vh;
+        width:100vw;
+        background-color:black;
+
+      }
+      .box
+      {
+        height:500px;
+        width:500px;
+        border:1px solid black;
+        background-color:green;
+        position:relative;
+        border-radius:50%;
+        animation-name:anim;
+        animation-duration:0.5s;
+        animation-iteration-count:infinite;
+        animation-timing-function:ease-in-out;
+        animation-direction:normal;
+      }
+      .inner-box
+      {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        background-color:black;
+        height:400px;
+        width:400px;
+        border:1px solid white;
+        border-radius:50%;
+       
+      }
+      @keyframes anim
+      {
+        0%{background-color:gray;transform:rotate(0deg);background-image:linear-gradient(0deg,red,green);box-shadow:1px 2px 1px 1px gray;}
+        100%{background-color:black;transform:rotate(360deg);background-image:linear-gradient(360deg,green,red);box-shadow:3px 4px 6px 1px gray;}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+      <div class="inner-box"></div>
+      </div>
+</div>
+  </body>
+  </html>
